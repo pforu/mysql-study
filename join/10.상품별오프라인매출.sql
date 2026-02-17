@@ -1,0 +1,6 @@
+-- 코드를 입력하세요
+SELECT p.PRODUCT_CODE, sum(s.SALES_AMOUNT)*p.PRICE SALES
+from OFFLINE_SALE s
+join PRODUCT p on s.PRODUCT_ID=p.PRODUCT_ID
+group by s.PRODUCT_ID
+order by SALES desc, p.PRODUCT_CODE
